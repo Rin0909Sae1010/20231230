@@ -1,0 +1,745 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+}
+
+/* 這將應用於所有包裹卡片的 <a> 標籤 */
+.card-link {
+    color: inherit; /* 這會使文字顏色繼承其父元素的顏色 */
+    text-decoration: none; /* 移除下劃線 */
+}
+
+/* 在懸停時也保持相同的樣式 */
+.card-link:hover,
+.card-link:visited,
+.card-link:active {
+    color: inherit; /* 保持文字顏色不變 */
+    text-decoration: none; /* 保持無下劃線 */
+}
+
+/*=============================================
+=                    導航欄                   =
+=============================================*/
+
+/* 導航欄基礎樣式 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 左右兩邊對齊 */
+    align-items: center; /* 垂直居中對齊 */
+    height: 80px;
+    width: 100%; /* 導航欄寬度與視口寬度相同 */
+    padding: 0 100px; /* 內邊距根據需要調整，保證左右兩側相等 */
+    box-sizing: border-box; /* 內邊距和邊框包含在寬度內 */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+    position: fixed;
+    z-index: 1;
+}
+
+/* 列表無樣式 */
+ul {
+    list-style: none;
+}
+
+/* 導航欄內的Logo與導航連結 */
+.logo, .row {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo圖片樣式 */
+.logo img {
+    height: 30px; /* 圖片高度 */
+    width: auto; /* 圖片寬度自動，保持圖片的原始比例 */
+    margin-right: 40px;
+    padding-bottom: 5px;
+}
+
+/* 導航連結列表樣式 */
+.nav-items1, .nav-items2 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    line-height: 14px;
+    gap: 30px; /* 導航連結之間的間隔 */
+    font-weight: 700;
+    color: #767676;
+}
+
+/* 導航項目2置中定位 */
+.nav-items2 {
+    justify-content: center;
+    left: 450px; /* 左側距離 */
+    position: absolute;
+}
+
+/* 導航連結的超連結文字樣式 */
+.nav-link-1 a, .nav-link a {
+    text-decoration: none; /* 移除下劃線 */
+    color: black; /* 文字顏色 */
+}
+
+/* 圖標間隔與樣式 */
+.nav-items3 {
+    display: flex;
+    margin-top: 15px;
+    padding: 0px;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* 圖標與右邊框對齊 */
+.nav-icon {
+    margin-left: auto; /* 自動填充左邊距，將元素推到右側 */
+}
+
+/* FontAwesome 圖標顏色 */
+.fa-user, .fa-heart, .fa-bell, .fa-magnifying-glass {
+    color: #767676; /* 圖標顏色 */
+}
+
+/*=============================================
+=                    輪播頁                   =
+=============================================*/
+
+.carousel {
+    width: 1920px;
+    max-width: 100%;
+    height: 350px;
+    margin: auto; /* 如果需要居中對齊 */
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+.carousel .carousel-item img {
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 350px; /* 固定高度 */
+    object-fit: cover; /* 避免圖片失真 */
+}
+
+/* 調整箭頭位置 */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+/*=============================================
+=                   精選方案                  =
+=============================================*/
+
+/* 主要區塊標題 */
+.section-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 50px 200px 20px 200px; /* 頂部和底部邊距 */
+}
+
+/* 卡片框架樣式 */
+.card-frame {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 200px; /* 左右邊距 */
+    margin-bottom: 100px;
+}
+
+/* 卡片容器樣式 */
+.card-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column; /* 垂直堆疊 */
+    gap: 30px; /* 元素間隔 */
+}
+
+/* 單個卡片樣式 */
+.card {
+    border-radius: 6px; /* 圓角 */
+    margin-right: 40px;
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* 卡片圖片樣式 */
+.card-image {
+    height: 280px;
+    background-color: #D9D9D9; /* 背景顏色 */
+    border-radius: 6px 6px 0 0; /* 上方圓角 */
+}
+
+.image{
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 280px; /* 固定高度 */
+    object-fit: cover; /* 避免圖片失真 */
+    border-radius: 6px 6px 0 0; /* 上方圓角 */
+}
+
+#image1{
+    height: 280px; /* 固定高度 */
+    background: url(../img/img_17.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+/* 卡片文本內容樣式 */
+.card-content {
+    padding: 10px; /* 內邊距 */
+}
+
+/* 卡片標題樣式 */
+.card-heading {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 12.5px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/* 卡片副標題樣式 */
+.card-subtitle {
+    color: rgba(0, 0, 0, 0.50); /* 文字顏色 */
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/* 卡片描述文本樣式 */
+.card-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/*=============================================
+=                   小卡片集                  =
+=============================================*/
+
+/* 小卡片集 */
+.multi-cards-frame {
+    display: flex;
+    flex-direction: column; /* 子元素垂直排列 */
+    gap: 10px; /* 子元素之間的間距 */
+}
+
+/* 小卡片容器 */
+.card-small-container {
+    display: flex;
+    height: 100px;
+    width: 500px;
+    border: 1px solid rgb(236, 236, 236); /* 邊框樣式 */
+    border-radius: 6px; /* 邊框圓角 */
+    background-color: #ffffff; /* 背景顏色 */
+}
+
+/* 小卡片 */
+.card-small {
+    display: flex;
+}
+
+/* 小卡片圖片 */
+.card-small-image {
+    width: 150px;
+    background-color: #D9D9D9; /* 背景顏色 */
+    border-radius: 6px; /* 圖片圓角 */
+    overflow: hidden;
+
+}
+
+#image2{
+    width: 150px;
+    background: url(../img/img_1.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+#image3{
+    width: 150px;
+    background: url(../img/img_2.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+#image4{
+    width: 150px;
+    background: url(../img/img_3.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+#image5{
+    width: 150px;
+    background: url(../img/img_4.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+/* 小卡片內容 */
+.card-small-content {
+    padding: 10px 16px;
+    width: 325px;
+}
+
+/* 小卡片標題 */
+.card-small-heading {
+    color: black; /* 文字顏色 */
+    width: 100%; /* 寬度填滿容器 */
+    font-size: 14px; /* 字體大小 */
+    font-weight: 700; /* 字體粗細 */
+    line-height: 20px; /* 行高 */
+}
+
+/* 小卡片副標題 */
+.card-small-subtitle {
+    color: rgba(0, 0, 0, 0.50); /* 文字顏色 */
+    font-size: 12px; /* 字體大小 */
+    font-weight: 400; /* 字體粗細 */
+    line-height: 20px; /* 行高 */
+    padding: 5px 0 4px 0; /* 內邊距 */
+}
+
+/* 小卡片描述 */
+.card-small-description {
+    color: black; /* 文字顏色 */
+    font-size: 12px; /* 字體大小 */
+    font-weight: 400; /* 字體粗細 */
+    padding-bottom: 6px; /* 底部內邊距 */
+}
+
+/*=============================================
+=                  產品卡片集                 =
+=============================================*/
+
+.card-product-frame {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 200px; /* 左右邊距 */
+}
+
+.condition{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    color: #2CAC97;
+    font-weight: 600;
+}
+
+/*=============================================
+=                   設計&科技                 =
+=============================================*/
+
+.section-product-title {
+    display: flex;
+    justify-content:space-between;
+    margin: 0px 200px 20px 200px; 
+}
+
+.section-recommend-title{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+/*=============================================
+=                  下拉式選單                 =
+=============================================*/
+
+  /* 容器樣式 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* 按鈕樣式 */
+  .dropbtn {
+    color: #2CAC97;
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 6px; /* 邊框圓角 */
+    font-family: 700;
+    margin-right: 20px;
+  }
+
+  /* 下拉內容樣式 */
+  .dropdown-content {
+    border-radius: 6px; /* 邊框圓角 */
+    font-family: 700;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* 下拉選項樣式 */
+  .dropdown-content a {
+    color: #2CAC97;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* 下拉選項 - 滑鼠懸停樣式 */
+  .dropdown-content a:hover {
+    color: #ffffff;
+    background-color: #2CAC97;
+}
+
+  /* 顯示下拉菜單的樣式 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* 改變按鈕背景顏色當下拉內容顯示時 */
+  .dropdown:hover .dropbtn {
+    border-radius: 6px; /* 邊框圓角 */
+    background-color: #e1e1e1;
+  }
+
+/*=============================================
+=                   產品卡片                 =
+=============================================*/
+
+/* 產品卡片框架樣式 */
+.card-product-frame {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 200px; /* 左右邊距 */
+}
+
+/* 產品卡片容器樣式 */
+.card-product-container {
+    display: flex;
+    flex-direction: column; /* 垂直堆疊 */
+}
+
+/* 產品單個卡片樣式 */
+.card-product {
+    border-radius: 6px; /* 圓角 */
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    overflow: hidden; /* 防止內容溢出 */
+    position: relative; /* 讓絕對定位的子元素根據此元素定位 */
+}
+
+/* 產品卡片圖片樣式 */
+.card-product-image {
+    background-color: #d4b4b4; /* 背景顏色 */
+    border-radius: 6px; /* 上方圓角 */
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 200px; /* 固定高度 */
+}
+
+.product-image{
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 200px; /* 固定高度 */
+    object-fit: cover; /* 避免圖片失真 */
+}
+
+#product-image1{
+    height: 200px;
+    background: url(../img/img_5.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image2{
+    height: 200px;
+    background: url(../img/img_6.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image3{
+    height: 200px;
+    background: url(../img/img_7.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image4{
+    height: 200px;
+    background: url(../img/img_8.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image5{
+    height: 200px;
+    background: url(../img/img_9.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image6{
+    height: 200px;
+    background: url(../img/img_10.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image7{
+    height: 200px;
+    background: url(../img/img_11.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image8{
+    height: 200px;
+    background: url(../img/img_12.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image9{
+    height: 200px;
+    background: url(../img/img_13.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image10{
+    height: 200px;
+    background: url(../img/img_14.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image11{
+    height: 200px;
+    background: url(../img/img_15.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image12{
+    height: 200px;
+    background: url(../img/img_16.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+.card-product-badge{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #ffffff;
+    border-radius: 0px 0px 6px 0px; /* 圓角 */
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* 產品卡片文本內容樣式 */
+.card-product-content {
+    padding: 15px; /* 內邊距 */
+}
+
+/* 產品卡片標題樣式 */
+.card-product-heading {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 12.5px; /* 行高 */
+    padding-top: 10px;
+}
+
+/* 產品卡片副標題樣式 */
+.card-product-subtitle {
+    color: rgba(0, 0, 0, 0.50); /* 文字顏色 */
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/* 產品卡片描述文本樣式 */
+.card-product-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+.card-product-funding-info{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+    color: #2CAC97;
+}
+
+/*=============================================
+=                    頁碼                     =
+=============================================*/
+
+/* 分頁組件基礎樣式 */
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+
+  }
+  
+  /* 分頁連結樣式 */
+  .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .pagination a {
+    font-size: 12px;
+    color: black;
+    float: left;
+    padding: 8px 14px;
+    text-decoration: none; /* 去除底線 */
+    transition: background-color .3s; /* 鼠標滑過時的過渡效果 */
+    margin: 0 4px; /* 間距 */
+    border-radius: 100%; /* 圓角邊框 */
+  }
+  
+  /* 當前頁面樣式 */
+  .pagination a.active {
+    background-color: #2CAC97; /* 背景顏色 */
+    color: white; /* 文字顏色 */
+  }
+  
+  /* 鼠標滑過連結時的背景變化 */
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  
+  /* 分頁容器的內邊距 */
+  .pagination-container {
+    text-align: center; /* 置中對齊 */
+  }
+  
+  /* 不可用連結的樣式 */
+  .pagination a.disabled {
+    color: #ccc; /* 文字顏色 */
+  }
+  
+
+/*=============================================
+=                  回到頂部                   =
+=============================================*/
+
+#myBtn {
+  position: fixed; /* 固定/粘性位置 */
+  bottom: 20px; /* 在頁面底部顯示按鈕 */
+  right: 30px; /* 距離右側30px */
+  z-index: 99; /* 確保它不會重疊 */
+  border: none; /* 移除邊框 */
+  outline: none; /* 移除輪廓 */
+  background-color: rgb(222, 222, 222); /* 設置背景顏色 */
+  color: rgb(146, 146, 146); /* 文字顏色 */
+  cursor: pointer; /* 滑過時添加鼠標指針 */
+  padding: 10px 15px; /* 一些內邊距 */
+  border-radius: 6px; /* 圓角邊框 */
+  font-size: 12px; /* 增加字體大小 */
+  font-weight: 900;
+}
+
+#myBtn:hover {
+  background-color: #2CAC97; /* 滑過時添加深灰色背景 */
+  color: #ffffff;
+}
+
+/*=============================================
+=                    底部                     =
+=============================================*/
+
+.flooer{
+    margin-top: 100px;
+    height: 200px;
+    background-color: #d8d8d8;
+    background: url(../img/flooer.JPG);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+/*=============================================
+=                   進度條                    =
+=============================================*/
+
+/* 進度條外部容器樣式 */
+.card-progress-bar {
+    width: 100%; /* 進度條的全寬 */
+    background-color: #cdcdcd; /* 進度條的背景顏色 */
+    border-radius: 10px; /* 進度條的圓角 */
+    height: 5px; /* 進度條的高度 */
+    position: relative; /* 為內部填充設置相對定位的參照 */
+}
+
+/* 進度條內部填充樣式 */
+.card-progress-fill {
+    width: 53%; /* 初始進度，可以通過JavaScript動態改變 */
+    background-color: #2CAC97; /* 已完成進度的顏色 */
+    height: 100%; /* 填充的高度與外部容器相同 */
+    border-radius: 10px; /* 填充的圓角 */
+    transition: width 0.5s ease-in-out; /* 平滑過渡效果 */
+    position: absolute; /* 絕對定位，相對於外部容器 */
+    left: 0; /* 從外部容器的左側開始 */
+}
+
+/*=============================================
+=                  Hover                     =
+=============================================*/
+
+[id^='icon']:hover{
+    color: #279a86;
+}
+
+[id^='title']:hover{
+    font-weight: 700;
+    color: #2CAC97;
+}
+
+[id^='image']{
+    background-size: cover;
+    opacity: 1;
+}
+
+[id^='image']:hover{
+    opacity: 0.7;
+}
+
+[id^='card']:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transition:all 0.4s ease 0s
+}
+
+[id^='product-image']{
+    background-size: cover;
+    filter: grayscale(0%);
+}
+
+[id^='product-image']:hover{
+    filter: grayscale(100%);
+}
+
+[id^='card-product']:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transform: scale(1.03);
+    transition:all 0.4s ease 0s
+}

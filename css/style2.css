@@ -1,0 +1,750 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+}
+
+/* 這將應用於所有包裹卡片的 <a> 標籤 */
+.link {
+    color: inherit; /* 這會使文字顏色繼承其父元素的顏色 */
+    text-decoration: none; /* 移除下劃線 */
+}
+
+/* 在懸停時也保持相同的樣式 */
+.link:hover,
+.link:visited,
+.link:active {
+    color: inherit; /* 保持文字顏色不變 */
+    text-decoration: none; /* 保持無下劃線 */
+}
+
+.items {
+    list-style-type: none; /* 移除項目前的標記 */
+    padding: 0; /* 移除預設的內距 */
+    margin: 0; /* 移除預設的外距 */
+    display: flex; /* 將顯示方式設為flex以排列子元素 */
+  }
+
+/*=============================================
+=                    導航欄                   =
+=============================================*/
+
+/* 導航欄基礎樣式 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 左右兩邊對齊 */
+    align-items: center; /* 垂直居中對齊 */
+    height: 80px;
+    width: 100%; /* 導航欄寬度與視口寬度相同 */
+    padding: 0 100px; /* 內邊距根據需要調整，保證左右兩側相等 */
+    box-sizing: border-box; /* 內邊距和邊框包含在寬度內 */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+    position: fixed;
+    z-index: 1;
+}
+
+/* 列表無樣式 */
+ul {
+    list-style: none;
+}
+
+/* 導航欄內的Logo與導航連結 */
+.logo, .row {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo圖片樣式 */
+.logo img {
+    height: 30px; /* 圖片高度 */
+    width: auto; /* 圖片寬度自動，保持圖片的原始比例 */
+    margin-right: 40px;
+    padding-bottom: 5px;
+}
+
+/* 導航連結列表樣式 */
+.nav-items1, .nav-items2 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    line-height: 14px;
+    gap: 30px; /* 導航連結之間的間隔 */
+    font-weight: 700;
+    color: #767676;
+}
+
+/* 導航項目2置中定位 */
+.nav-items2 {
+    justify-content: center;
+    left: 450px; /* 左側距離 */
+    position: absolute;
+}
+
+/* 導航連結的超連結文字樣式 */
+.nav-link-1 a, .nav-link a {
+    text-decoration: none; /* 移除下劃線 */
+    color: black; /* 文字顏色 */
+}
+
+/* 圖標間隔與樣式 */
+.nav-items3 {
+    display: flex;
+    margin-top: 15px;
+    padding: 0px;
+    justify-content: center;
+}
+
+/* 圖標與右邊框對齊 */
+.nav-icon {
+    margin-left: auto; /* 自動填充左邊距，將元素推到右側 */
+}
+
+/* FontAwesome 圖標顏色 */
+.fa-user, .fa-heart, .fa-bell, .fa-magnifying-glass {
+    color: #767676; /* 圖標顏色 */
+}
+
+/*=============================================
+=                 上半部資訊                   =
+=============================================*/
+
+/* 麵包屑導航樣式 */
+.breadcrumbs {
+    display: inline-block;
+    margin-left: 200px;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 150px;
+}
+
+/* Font Awesome 圖標樣式 */
+.fa-solid {
+    font-size: 10px;
+    margin: 0px 15px;
+}
+
+/* 容器樣式，用於主要布局 */
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 400px;
+}
+
+/* 詳細資訊欄位樣式 */
+.details {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+}
+
+/* 橫幅圖片樣式 */
+.banner {
+    background: #D9D9D9;
+    border-radius: 6px;
+    width: 900px;
+    height: 360px;
+    width: 100%; /* 使圖片寬度適應容器 */
+}
+
+#banner1{
+    width: 900px;
+    height: 360px;
+    background: url(../img/img_17.jpg);
+    background-size: 100%;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+
+/* 標題樣式 */
+.title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* 副標題樣式 */
+.sub-title {
+    font-size: 12px;
+    color: #878787;
+}
+
+/* 募資資訊樣式 */
+.funding-info {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* 募資金額樣式 */
+.funding-amount {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2CAC97;
+}
+
+/* 募資目標樣式 */
+.funding-target {
+    font-size: 12px;
+    color: #878787;
+}
+
+/* 附加資訊區塊樣式 */
+.additional {
+    display: flex;
+}
+
+/* 附加資訊文本樣式 */
+.additional-info {
+    display: inline-block;
+    color: #575757;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+
+}
+
+/* 剩餘天數與贊助人數樣式 */
+.days-left, .backer-count {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.numerical-value{
+    font-size: 25px;
+    font-weight: 700;
+    color: #279a86;
+}
+
+/* 剩餘天數與贊助人數的補充說明樣式 */
+.days-left2, .backer-count2,.percentage {
+    font-size: 12px;
+    color: #878787;
+}
+
+/* 募資期間標籤樣式 */
+.period-label {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #878787;
+}
+
+.button{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 10px;
+}
+
+/* 支持按鈕樣式 */
+.support-button {
+    width: 320px;
+    padding: 10px;
+    background: #2CAC97;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*=============================================
+=                 下半部資訊                   =
+=============================================*/
+
+/*=============================================
+=                   專案內容                  =
+=============================================*/
+
+.frame{
+    display: flex;
+    margin: 0px 200px;
+    gap: 50px;
+}
+
+.section-frame{
+    width: 550px;
+}
+
+.items2{
+    padding: 0px;
+}
+
+.items2-title{
+    font-weight: 700;
+    width: 80px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #a5a5a5;
+}
+
+.title1{
+    color: #000000;
+}
+
+.section{
+    margin-bottom: 50px;
+}
+
+.product-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.product-description{
+    font-size: 14px;
+    margin: 30px 0px;
+}
+
+.product-image{
+    width: 100%; /* 使圖片寬度適應容器 */
+    overflow: hidden; /* 防止內容溢出 */
+    border-radius: 6px; /* 上方圓角 */
+}
+
+#product-image1{
+    height: 300px;
+    background: url(../img/img_21.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image2{
+    height: 300px;
+    background: url(../img/img_18.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image3{
+    height: 500px;
+    background: url(../img/img_19.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#product-image4{
+    height: 300px;
+    background: url(../img/img_20.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+/*=============================================
+=                  專案導航欄                  =
+=============================================*/
+
+.items{
+    padding: 30px 0px;
+    margin: 60px 200px 80px 200px;
+    font-weight: 700;
+    gap: 50px;
+    color: #a5a5a5;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    box-shadow: 0px 3px 5px rgba(207, 207, 207, 0.11);
+}
+
+/*=============================================
+=                  專案摘要                   =
+=============================================*/
+
+.project-info{
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.project{
+    display: flex;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.project-title{
+    margin-right: 20px;
+    width: 80px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.project-description{
+    width: 300px;
+    font-size: 14px;
+}
+
+/*=============================================
+=                  品牌資訊                   =
+=============================================*/
+
+.brand {
+    display: flex; /* 使用 Flexbox 來排列子元素 */
+    justify-content: space-between;
+    align-items: center; /* 垂直居中對齊 */
+    padding: 30px 0px 50px 0px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+  }
+  
+  .image-brand {
+    width: 100px;
+    height: 100px;
+    background-color: #767676;
+    border-radius: 100%;
+    margin-right: 30px; /* 在圖片和文字之間添加一些間距 */
+    background: url(../img/img_23.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+  }
+
+  .brand-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .brand-description{
+    font-size: 12px;
+  }
+  
+  .text-brand{
+    width: 300px;
+    padding: 0;
+    margin: 0; /* 移除段落預設的邊距 */
+  }
+  
+
+/*=============================================
+=                  募資方案                   =
+=============================================*/
+
+.fundraising-plan{
+    margin-top: 50px;
+}
+
+.fundraising-plan-additional{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.fundraising-plan-image{
+    height: 130px;
+    border-radius: 6px; /* 圓角 */
+    background: url(../img/img_22.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+.plan-additional{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.fundraising-plan-title{
+    display: flex;
+    justify-content:space-between;
+    font-size: 20px;
+    margin: 30px 0px 20px 0px;
+    font-weight: 700;
+}
+
+.fundraising-plan-description{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.fundraising-text{
+    font-size: 12px;
+    width: 200px;
+    color: #686868;
+}
+
+.fundraising-plan-additional-info{
+    display: inline-block;
+}
+
+.days-left{
+    color:#c14444; 
+}
+
+.NumberOfPeople,.numberOfCopies,.Date,.Taiwan{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.NumberOfSponsors,.TheRemainingAmount,.ShippingDate,.ShippingArea{
+    font-size: 12px;
+    color: #a2a2a2;
+}
+
+.numberOfCopies{
+    color: #d62a2a;
+}
+
+/*=============================================
+=                   其他推薦                   =
+=============================================*/
+
+.recommend-title{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 10px 200px 50px 200px;
+}
+
+.more{
+    font-size: 14px;
+    font-weight: 600;
+    color: #2CAC97;
+    align-items: center;
+}
+
+.more-icon{
+    color: #2CAC97;
+}
+
+.card-recommend-frame {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 200px; /* 左右邊距 */
+}
+
+.section-recommend-title {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+/* 推薦卡片框架樣式 */
+.card-recommend-frame {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 200px; /* 左右邊距 */
+}
+
+/* 推薦卡片容器樣式 */
+.card-recommend-container {
+    display: flex;
+    flex-direction: column; /* 垂直堆疊 */
+}
+
+/* 推薦單個卡片樣式 */
+.card-recommend {
+    border-radius: 6px; /* 圓角 */
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    overflow: hidden; /* 防止內容溢出 */
+    position: relative; /* 讓絕對定位的子元素根據此元素定位 */
+}
+
+/* 推薦卡片圖片樣式 */
+.card-recommend-image {
+    background-color: #d4b4b4; /* 背景顏色 */
+    border-radius: 6px; /* 上方圓角 */
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 200px; /* 固定高度 */
+}
+
+.recommend-image{
+    width: 100%; /* 使圖片寬度適應容器 */
+    height: 200px; /* 固定高度 */
+    object-fit: cover; /* 避免圖片失真 */
+}
+
+#recommend-image1{
+    height: 200px; /* 固定高度 */
+    background: url(../img/img_6.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#recommend-image2{
+    height: 200px; /* 固定高度 */
+    background: url(../img/img_7.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#recommend-image3{
+    height: 200px; /* 固定高度 */
+    background: url(../img/img_8.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+#recommend-image4{
+    height: 200px; /* 固定高度 */
+    background: url(../img/img_9.jpg);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+/* 推薦卡片文本標籤樣式 */
+.card-recommend-badge{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #ffffff;
+    border-radius: 0px 0px 6px 0px; /* 圓角 */
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* 推薦卡片文本內容樣式 */
+.card-recommend-content {
+    padding: 15px; /* 內邊距 */
+}
+
+/* 推薦卡片標題樣式 */
+.card-recommend-heading {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 12.5px; /* 行高 */
+    padding-top: 10px;
+}
+
+/* 推薦卡片副標題樣式 */
+.card-recommend-subtitle {
+    color: rgba(0, 0, 0, 0.50); /* 文字顏色 */
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/* 推薦卡片描述文本樣式 */
+.card-recommend-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 行高 */
+    padding: 10px 0; /* 上下內邊距 */
+}
+
+/*=============================================
+=                  回到頂部                   =
+=============================================*/
+
+#myBtn {
+    position: fixed; /* 固定/粘性位置 */
+    bottom: 20px; /* 在頁面底部顯示按鈕 */
+    right: 30px; /* 距離右側30px */
+    z-index: 99; /* 確保它不會重疊 */
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除輪廓 */
+    background-color: rgb(222, 222, 222); /* 設置背景顏色 */
+    color: rgb(146, 146, 146); /* 文字顏色 */
+    cursor: pointer; /* 滑過時添加鼠標指針 */
+    padding: 10px 15px; /* 一些內邊距 */
+    border-radius: 6px; /* 圓角邊框 */
+    font-size: 12px; /* 增加字體大小 */
+    font-weight: 900;
+  }
+  
+  #myBtn:hover {
+    background-color: #2CAC97; /* 滑過時添加深灰色背景 */
+    color: #ffffff;
+  }
+
+/*=============================================
+=                    底部                     =
+=============================================*/
+
+.flooer{
+    margin-top: 100px;
+    height: 200px;
+    background-color: #d8d8d8;
+    background: url(../img/flooer.JPG);
+    background-size: cover;
+    overflow: hidden; /* 防止內容溢出 */
+    border-top: 1px solid rgb(217, 217, 217);
+}
+
+/*=============================================
+=                   進度條                    =
+=============================================*/
+
+/* 進度條外部容器樣式 */
+.card-progress-bar {
+    width: 100%; /* 進度條的全寬 */
+    background-color: #cdcdcd; /* 進度條的背景顏色 */
+    border-radius: 10px; /* 進度條的圓角 */
+    height: 10px; /* 進度條的高度 */
+    position: relative; /* 為內部填充設置相對定位的參照 */
+    z-index: -1;
+}
+
+/* 進度條內部填充樣式 */
+.card-progress-fill {
+    width: 53%; /* 初始進度，可以通過JavaScript動態改變 */
+    background-color: #2CAC97; /* 已完成進度的顏色 */
+    height: 100%; /* 填充的高度與外部容器相同 */
+    border-radius: 10px; /* 填充的圓角 */
+    transition: width 0.5s ease-in-out; /* 平滑過渡效果 */
+    position: absolute; /* 絕對定位，相對於外部容器 */
+    left: 0; /* 從外部容器的左側開始 */
+}
+
+/*=============================================
+=                  Hover                     =
+=============================================*/
+
+[id^='icon']:hover{
+    color: #279a86;
+}
+
+[id^='title']:hover{
+    font-weight: 700;
+    color: #2CAC97;
+}
+
+[id^='button']:hover{
+    background-color: #228575;
+}
+
+[id^='card']:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transition:all 0.4s ease 0s
+}
+
+[id^='recommend-image']{
+    background-size: cover;
+    filter: grayscale(0%);
+}
+
+[id^='recommend-image']:hover{
+    filter: grayscale(100%);
+}
+
+[id^='card-recommend']:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transform: scale(1.03);
+    transition:all 0.4s ease 0s
+}
+
+[id^='banner']:hover{
+    opacity: 0.7;
+}
+
+[id^='plan-image']:hover{
+    opacity: 0.7;
+}
+
+[id^='image-brand']:hover{
+    opacity: 0.7;
+}
