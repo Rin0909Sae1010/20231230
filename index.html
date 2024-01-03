@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      
+    <!-- 連結css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 連結js -->
+    <script src="./html.js"></script>
+
+    <!-- 使用font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- ==================== 導航欄 ==================== -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <!-- 在此處放置Logo圖片 -->
+            <a class="navbar-logo" href="#"><img src="./img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="row">
+            <ul class="nav-items1">
+                <li id="title1" class="nav-link-1"><a href="./index.html" class="card-link">|&emsp;&emsp;探索</a></li>
+                <li id="title2" class="nav-link-1"><a href="#" class="card-link">提案</a></li>
+            </ul>
+        </div>
+    <div class="row">
+            <ul class="nav-items2">
+                <li id="title3" class="nav-link"><a href="./index.html" class="card-link">設計&科技</a></li>
+                <li id="title4" class="nav-link"><a href="#" class="card-link">教育</a></li>
+                <li id="title5" class="nav-link"><a href="#" class="card-link">遊戲</a></li>
+                <li id="title6" class="nav-link"><a href="#" class="card-link">音樂</a></li>
+                <li id="title7" class="nav-link"><a href="#" class="card-link">攝影</a></li>
+                <li id="title8" class="nav-link"><a href="#" class="card-link">漫畫&動畫</a></li>
+                <li id="title9" class="nav-link"><a href="#" class="card-link">出版</a></li>
+            </ul>
+        </div>
+        <div class="nav-icon">
+            <ul class="nav-items3">
+                <li class="nav-icon-link"><a href="#"><i id="icon1" class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li class="nav-icon-link"><a href="#"><i id="icon2" class="fa-solid fa-heart fa-sm"></i></a></li>
+                <li class="nav-icon-link"><a href="#"><i id="icon3" class="fa-solid fa-user fa-sm"></i></a></li>
+                <li class="nav-icon-link"><a href="#"><i id="icon4" class="fa-solid fa-bell "></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== 輪播頁 ==================== -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 1920px; height: 350px;">
+        <div class="carousel-inner">
+            <!-- === 第一張圖片 === -->
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="./img/nav_img1.png" alt="第一張幻燈片">
+            </div>
+            <!-- === 第二張圖片 === -->
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/nav_img2.png" alt="第二張幻燈片">
+            </div>
+            <!-- === 第三張圖片 === -->
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/nav_img3.png" alt="第三張幻燈片">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">上一張</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">下一張</span>
+        </a>
+    </div>
+
+    <!-- ==================== 精選方案 ==================== -->
+
+    <!-- ===== 卡片集 ===== -->
+    <div class="section-title">精選方案</div>
+    <div class="card-frame">
+        <!-- === 卡片1 === -->
+        <div class="card-container">
+            <a href="./index2.html" class="card-link">
+                <div id="card1" class="card">
+                    <!-- 卡片圖片 -->
+                    <div id="image1" class="card-image"></div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                <!-- 卡片文字 -->
+                    <div class="card-content">
+                        <div class="card-heading">ARROWMAX M1 PRO</div>
+                        <div class="card-subtitle">Name Education Program</div>
+                        <div class="card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, aspernatur? Quod sequi cupiditate natus cumque!</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    <!-- ===== 小卡片集 ===== -->
+    <div class="multi-cards-frame">
+        <!-- === 小卡片1 === -->
+        <div id="card2" class="card-small-container">
+            <a href="#" class="card-link">
+                <div class="card-small">
+                    <!-- 卡片圖片 -->
+                    <div id="image2" class="card-small-image"></div>
+                    <!-- 卡片文字 -->
+                    <div class="card-small-content">
+                        <div class="card-small-heading">Why Choose Us?</div>
+                        <div class="card-small-subtitle">Name Education Program</div>
+                        <div class="card-small-description">Our platform is user-friendly and intuitive.</div>
+                        <!-- 進度條 -->
+                        <div class="card-progress-bar">
+                            <div class="card-progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- === 小卡片2 === -->
+        <div id="card3" class="card-small-container">
+            <a href="#" class="card-link">
+                <div class="card-small">
+                    <!-- 卡片圖片 -->
+                    <div id="image3" class="card-small-image"></div>
+                    <!-- 卡片文字 -->
+                    <div class="card-small-content">
+                        <div class="card-small-heading">Why Choose Us?</div>
+                        <div class="card-small-subtitle">Name Education Program</div>
+                        <div class="card-small-description">Our platform is user-friendly and intuitive.</div>
+                        <!-- 進度條 -->
+                        <div class="card-progress-bar">
+                            <div class="card-progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- === 小卡片3 === -->
+        <div id="card4" class="card-small-container">
+            <a href="#" class="card-link">
+                <div class="card-small">
+                    <!-- 卡片圖片 -->
+                    <div id="image4" class="card-small-image"></div>
+                    <!-- 卡片文字 -->
+                    <div class="card-small-content">
+                        <div class="card-small-heading">Why Choose Us?</div>
+                        <div class="card-small-subtitle">Name Education Program</div>
+                        <div class="card-small-description">Our platform is user-friendly and intuitive.</div>
+                        <!-- 進度條 -->
+                        <div class="card-progress-bar">
+                            <div class="card-progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- === 小卡片4 === -->
+        <div id="card5" class="card-small-container">
+            <a href="#" class="card-link">
+                <div class="card-small">
+                    <!-- 卡片圖片 -->
+                    <div id="image5" class="card-small-image"></div>
+                    <!-- 卡片文字 -->
+                    <div class="card-small-content">
+                        <div class="card-small-heading">Why Choose Us?</div>
+                        <div class="card-small-subtitle">Name Education Program</div>
+                        <div class="card-small-description">Our platform is user-friendly and intuitive.</div>
+                        <!-- 進度條 -->
+                        <div class="card-progress-bar">
+                            <div class="card-progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+    <!-- ==================== 設計&科技 ==================== -->
+    <div class="section-product-title">
+        <div class="section-recommend-title">設計&科技</div>
+        <div class="condition">
+            <div class="FilterCriteria">
+                <!-- ========== 下拉式選單1-專案進度 ========== -->
+                <div class="dropdown">
+                    <button class="dropbtn" style="font-weight: 600;">專案進度&emsp;<span class="FilterCriteria-item"><a href="#" class="card-link"><i class="fa-solid fa-sort-down"></i></a></span></button>
+                    <div class="dropdown-content">
+                      <a href="#">全部</a>
+                      <a href="#">熱門專案</a>
+                      <a href="#">新興專案</a>
+                      <a href="#">進行中</a>
+                      <a href="#">已結束</a>
+                      <a href="#">未達標</a>
+                      <a href="#">已達標</a>
+                    </div>
+                  </div>
+                                  <!-- ========== 下拉式選單1-專案進度 ========== -->
+                <div class="dropdown">
+                    <button class="dropbtn" style="font-weight: 600;">專案性質&emsp;<span class="FilterCriteria-item"><a href="#" class="card-link"><i class="fa-solid fa-sort-down"></i></a></span></button>
+                    <div class="dropdown-content">
+                      <a href="#">全部</a>
+                      <a href="#">群眾募資</a>
+                      <a href="#">預購式專案</a>
+                      <a href="#">訂閱式專案</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-product-title"></div>
+    <!-- ===== 產品卡片集1 ====== -->
+    <div class="card-product-frame">
+    <!-- === 產品卡片1 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product1" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image1" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片2 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product2" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image2" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片3 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product3" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image3" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片4 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product4" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image4" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- ===== 產品卡片集2 ====== -->
+<div class="card-product-frame">
+    <!-- === 產品卡片5 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product5" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image5" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片6 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product6" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image6" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片7 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product7" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image7" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片8 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product8" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image8" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- ===== 產品卡片集3 ====== -->
+<div class="card-product-frame">
+    <!-- === 產品卡片9 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product9" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image9" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片10 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product10" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image10" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片11 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product11" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image11" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- === 產品卡片12 === -->
+    <div class="card-product-container">
+        <a href="#" class="card-link">
+            <div id="card-product12" class="card-product">
+                <!-- 卡片圖片 -->
+                <div id="product-image12" class="card-product-image"></div>
+                <!-- 卡片標籤 -->
+                <div class="card-product-badge">設計&科技</div>
+                <!-- 卡片文字 -->
+                <div class="card-product-content">
+                    <div class="card-product-heading">Why Choose Us?</div>
+                    <div class="card-product-subtitle">Name Education Program</div>
+                    <div class="card-product-description">Our platform is user-friendly and isyec intuitive.</div>
+                    <div class="card-product-funding-info">NT$25,520  |  23%  |  剩餘18天 </div>
+                    <!-- 進度條 -->
+                    <div class="card-progress-bar">
+                        <div class="card-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- ========== 頁碼 ========== -->
+<!-- 分頁組件容器 -->
+<div class="pagination">
+    <!-- 上一頁按鈕 -->
+    <a href="#">&laquo;</a>
+    <!-- 當前頁面標示 -->
+    <a href="#" class="active">1</a>
+    <!-- 分頁數字 -->
+    <a href="#">2</a>
+    <!-- 其他頁面 -->
+    <a href="#">3</a>
+    <!-- 省略符號代表更多頁面 -->
+    <a href="#">...</a>
+    <!-- 最後一頁 -->
+    <a href="#">9</a>
+    <!-- 下一頁按鈕 -->
+    <a href="#">&raquo;</a>
+  </div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div class="flooer"></div>
+</body>
+</html>
